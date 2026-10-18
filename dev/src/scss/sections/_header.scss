@@ -1,0 +1,75 @@
+@use "../tools" as *;
+
+.header {
+	position: relative;
+	width: 100%;
+	z-index: 55;
+	padding-block: 10px 20px;
+	.link {
+		@include hover-link(var(--color-accent));
+	}
+
+	&.header-home {
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: var(--color-white);
+		.link {
+			@include hover-link(var(--color-white));
+		}
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 5;
+	}
+
+	&__menu {
+	}
+
+	&__burger-btn {
+	}
+}
+
+.header-menu {
+	display: flex;
+	align-items: center;
+	gap: 35px adapt(93, 20, $tablet);
+	@include media($tablet) {
+		color: var(--color-white);
+	}
+	&__main-menu {
+		@include media($tablet) {
+			width: 100%;
+		}
+	}
+
+	&__box {
+		@include media($tablet) {
+			width: 100%;
+			@include flex-column;
+			gap: 10px;
+			align-items: center;
+		}
+	}
+
+	&__btn {
+		@include media($tablet) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__phone {
+		font-size: 24px;
+	}
+
+	&__email {
+	}
+}

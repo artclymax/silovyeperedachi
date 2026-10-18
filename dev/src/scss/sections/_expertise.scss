@@ -1,0 +1,37 @@
+@use "../tools" as *;
+
+.expertise {
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__grid {
+		gap: adapt(40, 20) 20px;
+	}
+
+	&__item {
+	}
+}
+.expertise-item {
+	@include flex-column;
+	align-items: center;
+	text-align: center;
+
+	&__icon {
+		width: adapt(105, 52);
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: adapt(20, 10);
+		}
+	}
+
+	&__descr {
+	}
+}

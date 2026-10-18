@@ -1,0 +1,20 @@
+@use "../tools" as *;
+
+.projects-page {
+	&__container {
+	}
+
+	&__grid {
+		gap: 20px;
+		--min: #{adapt(590, 340)};
+	}
+
+	&__load-more {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__empty {
+	}
+}

@@ -1,0 +1,119 @@
+@use "../tools" as *;
+
+.footer {
+	background: var(--color-dark);
+	color: var(--color-white);
+	padding-block: 60px 100px;
+	&__container {
+		@include flex-column;
+		gap: 20px;
+	}
+
+	&__top {
+		display: grid;
+		grid-template-columns: 1fr 0.5fr 0.7fr 0.75fr;
+		gap: 40px adapt(68, 20, $tablet);
+
+		@include media($tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include media($mobile) {
+			grid-template-columns: 1fr;
+		}
+
+		&:not(:last-child) {
+			padding-bottom: 20px;
+			border-bottom: 1px solid var(--color-border);
+		}
+	}
+
+	&__info {
+		@include flex-column;
+		gap: 40px;
+
+		@include media($tablet) {
+			grid-column: 1 / -1;
+		}
+
+		@include media($tablet) {
+			align-items: center;
+		}
+	}
+
+	&__logo {
+	}
+
+	&__descr {
+		@include media($tablet) {
+			text-align: center;
+		}
+	}
+
+	&__nav {
+	}
+
+	&__catalog {
+	}
+
+	&__contacts {
+		@include media($tablet) {
+			grid-column: 1 / -1;
+		}
+	}
+
+	&__contacts-box {
+		@include flex-column;
+		gap: 20px;
+	}
+
+	&__bottom {
+		font-size: 14px;
+	}
+
+	&__bottom-links {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		@include media($mobile) {
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	&__bottom-link {
+		@include hover-link(var(--color-accent));
+		&:first-child {
+			order: 3;
+		}
+	}
+
+	&__copy {
+	}
+}
+
+.footer-col {
+	@include flex-column;
+	gap: 20px;
+
+	&__title {
+		@include reset;
+		font-weight: 400;
+		font-size: 16px;
+		padding-bottom: 16px;
+	}
+}
+
+.footer-menu {
+	@include reset-list;
+	@include flex-column;
+	gap: 20px;
+
+	a {
+		@include hover-link(var(--color-accent));
+	}
+}

@@ -1,0 +1,29 @@
+@use "../tools" as *;
+
+.hero-catalog {
+	padding-block: adapt(20, 10) adapt(30, 20);
+	background: var(--color-warm-bg);
+
+	&__container {
+		@include flex-column;
+		gap: 40px;
+		text-align: center;
+		color: var(--color-dark);
+	}
+
+	&__breadcrumbs {
+	}
+
+	&__content {
+		@include flex-column;
+		gap: adapt(20, 10);
+		align-items: center;
+	}
+
+	&__title {
+	}
+
+	&__descr {
+		max-width: 420px;
+	}
+}

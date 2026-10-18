@@ -1,0 +1,44 @@
+@use "../tools" as *;
+
+.project-details-gallery {
+	padding-top: var(--section-padding);
+
+	&__container {
+	}
+
+	&__header {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px 20px;
+
+		@include media($mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__title {
+	}
+
+	&__descr {
+	}
+
+	&__slider {
+		overflow: hidden;
+		@include flex-column;
+		gap: 20px;
+	}
+
+	&__swiper {
+		width: 100%;
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+
+	&__image {
+		height: adapt(218, 192, $finishBreakpoint, $mobile);
+	}
+}

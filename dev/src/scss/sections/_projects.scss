@@ -1,0 +1,21 @@
+@use "../tools" as *;
+
+.projects {
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__grid {
+		gap: 20px;
+		--min: #{adapt(590, 340)};
+	}
+
+	&__item {
+	}
+
+	&__btn {
+		justify-self: center;
+	}
+}

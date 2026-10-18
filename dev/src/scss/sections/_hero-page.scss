@@ -1,0 +1,60 @@
+@use "../tools" as *;
+
+.hero-page {
+	background: var(--color-warm-bg);
+	color: var(--color-dark);
+
+	&__container {
+		--gap: 20px;
+		--width: #{adapt(590, 360, $mobile)};
+		position: relative;
+
+		@include media($mobile) {
+			padding-inline: var(--container-padding);
+			padding-bottom: 20px;
+		}
+	}
+
+	&__wrapper {
+		padding-block: adapt(24, 10);
+		@include flex-column;
+		@include media($mobile) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__breadcrumbs {
+		&:not(:last-child) {
+			margin-bottom: adapt(86, 40);
+		}
+	}
+
+	&__content {
+	}
+
+	&__title {
+		@include media($mobile) {
+			@include title-1;
+			padding-bottom: 16px;
+
+			&::after {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: adapt(20, 10);
+		}
+	}
+
+	&__descr {
+	}
+
+	&__image {
+		min-height: #{adapt(285, 159, $finishBreakpoint, $tablet)};
+	}
+}
+
+.hero-page-simple {
+	padding-block: var(--section-padding-025);
+}

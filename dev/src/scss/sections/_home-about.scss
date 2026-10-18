@@ -1,0 +1,73 @@
+@use "../tools" as *;
+
+.home-about {
+	padding-top: unset;
+	&__container {
+		--width: #{adapt(650, 360, $mobile)};
+		--gap: #{adapt(42, 20, $tablet)};
+		@include media($mobile) {
+			padding: unset;
+			padding-top: 60px;
+			gap: 20px;
+		}
+	}
+
+	&__title {
+		@include media($mobile) {
+			padding-inline: var(--container-padding);
+		}
+	}
+
+	&__image {
+		@include media($mobile) {
+			height: 289px;
+			width: 100%;
+			flex: 0 1 auto;
+		}
+	}
+
+	&__content {
+		padding-top: 24px;
+		@include flex-column;
+		gap: adapt(40, 20);
+
+		@include media($mobile) {
+			padding-top: unset;
+			padding-inline: var(--container-padding);
+		}
+	}
+
+	&__list {
+		@include reset-list;
+		@include flex-column;
+		gap: adapt(40, 20);
+	}
+
+	&__item {
+	}
+}
+
+.home-about-item {
+	display: flex;
+	gap: adapt(54, 20, $tablet);
+	align-items: center;
+
+	&__icon {
+		width: adapt(96, 49);
+		flex-shrink: 0;
+	}
+
+	&__content {
+		@include flex-column;
+		gap: adapt(20, 10);
+	}
+
+	&__title {
+	}
+
+	&__descr {
+		@include media($mobile, min) {
+			max-width: 376px;
+		}
+	}
+}

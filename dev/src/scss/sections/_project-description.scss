@@ -1,0 +1,19 @@
+@use "../tools" as *;
+
+.project-description {
+	padding-bottom: var(--section-padding);
+
+	&__container {
+	}
+
+	&__content {
+		* {
+			line-height: 1;
+		}
+		@include media($mobile) {
+			text-align: center;
+
+			@include title-3;
+		}
+	}
+}

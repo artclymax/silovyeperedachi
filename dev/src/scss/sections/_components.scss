@@ -1,0 +1,32 @@
+@use "../tools" as *;
+
+.section-gap {
+	display: grid;
+	align-items: start;
+	gap: var(--section-gap);
+}
+.section-gap-2 {
+	display: grid;
+	align-items: start;
+	gap: adapt(40, 20);
+}
+.title-decor {
+	position: relative;
+	padding-bottom: 16px;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 83px;
+		height: 4px;
+		background-color: var(--color-accent);
+	}
+	&--center {
+		text-align: center;
+		&::after {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}

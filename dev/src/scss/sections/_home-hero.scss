@@ -1,0 +1,58 @@
+@use "../tools" as *;
+
+.home-hero {
+	position: relative;
+	z-index: 1;
+	color: var(--color-white);
+	background: var(--color-dark);
+	padding-top: var(--header-height);
+
+	&__container {
+		@include flex-column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		min-height: calc(98dvh - var(--header-height));
+		gap: adapt(20, 10);
+		text-transform: uppercase;
+	}
+
+	&__content {
+		@include flex-column;
+		justify-content: center;
+		text-align: center;
+		gap: adapt(20, 10);
+		max-width: 900px;
+		padding-block: adapt(40, 20);
+		margin-top: auto;
+	}
+
+	&__title {
+	}
+
+	&__descr {
+		font-size: adapt(28, 16);
+		font-weight: 200;
+		max-width: 740px;
+		margin: 0 auto;
+	}
+
+	&__scroll-down {
+		margin-top: auto;
+		color: var(--color-white);
+		transition: all 0.3s ease-in-out;
+
+		@include hover {
+			transform: translateY(8px);
+		}
+	}
+
+	&__media {
+		@include image-abs;
+		z-index: -1;
+		@include overlay(var(--color-black), 0.4);
+	}
+
+	&__video {
+	}
+}

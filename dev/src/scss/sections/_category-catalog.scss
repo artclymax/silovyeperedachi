@@ -1,0 +1,88 @@
+@use "../tools" as *;
+
+.category-catalog {
+	&__container {
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+
+		@include media($mobile) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__header-content {
+		max-width: 690px;
+		@include flex-column;
+		gap: adapt(20, 10);
+	}
+
+	&__title {
+	}
+
+	&__descr {
+		grid-column: 1;
+	}
+
+	&__btn {
+	}
+
+	&__grid {
+		gap: 10px;
+		@include media($tablet, min) {
+			--min: 390px;
+			gap: 5px;
+		}
+	}
+
+	&__item {
+	}
+}
+
+.product-card {
+	position: relative;
+	z-index: 1;
+	@include reset-link;
+	overflow: hidden;
+	background: #d9d9d9;
+	@include hover {
+		.product-card__content {
+			&::before {
+				opacity: 0;
+			}
+		}
+		.product-card__image {
+			transform: scale(1.1);
+		}
+	}
+	&__image {
+		@include image-abs;
+		z-index: -1;
+
+		transition: all 0.3s ease-in-out;
+	}
+
+	&__content {
+		min-height: adapt(336, 265);
+		padding: 20px 10px;
+		@include flex-column;
+		gap: 10px;
+		justify-content: flex-end;
+		@include overlay(var(--color-white), 0.5) {
+			z-index: -1;
+			transition: all 0.3s ease-in-out;
+		}
+		color: var(--color-dark);
+	}
+
+	&__title {
+	}
+
+	&__power {
+	}
+}

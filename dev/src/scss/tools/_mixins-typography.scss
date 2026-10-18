@@ -1,0 +1,47 @@
+@use "functions" as *;
+@use "mixins" as *;
+@use "constants" as *;
+
+@mixin title-1 {
+	@include reset;
+	font-family: var(--font-family-main);
+	font-size: adapt(72, 40);
+	font-weight: 600;
+	line-height: 110%;
+}
+
+@mixin title-2 {
+	@include reset;
+	font-family: var(--font-family-main);
+	font-size: adapt(48, 32);
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: -0.01em;
+	color: var(--color-dark);
+}
+
+@mixin title-3 {
+	@include reset;
+	font-family: var(--font-family-main);
+	font-size: adapt(28, 24);
+	font-weight: 500;
+	line-height: 130%;
+	color: var(--color-dark);
+}
+
+@mixin title-4 {
+	@include reset;
+	font-family: var(--font-family-main);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 130%;
+	color: var(--color-dark);
+}
+
+@mixin text-menu {
+	@include reset;
+	font-family: var(--font-family-main);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 125%;
+}

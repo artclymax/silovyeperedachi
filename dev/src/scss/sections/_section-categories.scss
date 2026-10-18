@@ -1,0 +1,64 @@
+@use "../tools" as *;
+
+.categories {
+	background: var(--color-warm-bg);
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__grid {
+		gap: 20px;
+		--min: #{adapt(590, 340)};
+	}
+
+	&__item {
+	}
+}
+.category-card {
+	@include flex-column;
+	&__image {
+		flex-shrink: 0;
+		height: 255px;
+		overflow: hidden;
+		@include hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+		img {
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&__content {
+		flex-grow: 1;
+		background: var(--color-white);
+		padding: adapt(20, 10, $tablet);
+		@include flex-column;
+		gap: adapt(30, 10);
+		align-items: start;
+	}
+
+	&__title {
+		a {
+			@include reset-link;
+			transition: all 0.3s ease-in-out;
+
+			@include hover {
+				color: var(--color-accent);
+			}
+		}
+	}
+
+	&__descr {
+	}
+
+	&__link {
+		margin-top: auto;
+	}
+}
+.link-arrow {
+}

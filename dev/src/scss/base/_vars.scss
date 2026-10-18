@@ -1,0 +1,41 @@
+@use "../tools" as *;
+
+:root {
+	--color-0: rgba(0, 0, 0, 0);
+	--color-black: #000;
+	--color-white: #fff;
+
+	// ===== Colors  =====
+	--color-accent: #2877c7;
+	--color-accent-hover: #2067ad;
+	--color-accent-pressed: #19548f;
+	--color-light: #f5f6f6;
+	--color-light-2: #eaf3fc;
+	--color-dark: #18222c;
+	--color-text: #46515b;
+	--color-text-secondary: #74808b;
+	--color-warm-bg: #f4f1eb;
+	--color-border: #d9dfe4;
+
+	// ===== Layouts =====
+	--header-height: 132px;
+
+	@include media($tablet) {
+		--header-height: 85px;
+	}
+
+	--section-padding: #{adapt(120, 60)};
+	--section-padding-05: #{adapt(60, 30)};
+	--section-padding-025: #{adapt(30, 15)};
+	--section-gap: #{adapt(60, 40)};
+
+	--container-width: 1200px;
+	--container-padding: 10px;
+
+	// ===== Fonts =====
+	--font-size-html: 100%;
+	--font-size: 16px;
+	--font-family-main: "Onest-VF", "Onest", sans-serif;
+	--line-height: 156%;
+	--letter-spacing: 0;
+}

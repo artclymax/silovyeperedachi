@@ -1,0 +1,85 @@
+@use "../tools" as *;
+
+.contacts-form {
+	position: relative;
+	z-index: 1;
+	color: var(--color-light-2);
+	@include media($mobile) {
+		padding-block: 20px;
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: 0.9fr 1fr;
+		gap: 20px adapt(78, 20, $tablet);
+
+		@include media($mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__content {
+		@include flex-column;
+		gap: 20px;
+		justify-content: space-between;
+	}
+
+	&__info {
+		@include flex-column;
+		gap: adapt(20, 10);
+	}
+
+	&__title {
+		color: inherit;
+	}
+
+	&__descr {
+	}
+
+	&__note {
+		@include flex-column;
+		gap: adapt(20, 10);
+	}
+
+	&__note-title {
+		color: inherit;
+	}
+
+	&__note-descr {
+	}
+
+	&__phone {
+		@include flex-column;
+		gap: adapt(20, 10);
+		align-items: start;
+	}
+
+	&__phone-label {
+		color: inherit;
+	}
+
+	&__phone-link {
+	}
+
+	&__form-box {
+		background: var(--color-white);
+		padding: adapt(20, 10);
+		color: var(--color-dark);
+		@include flex-column;
+		gap: 20px;
+	}
+
+	&__form-title {
+	}
+
+	&__form {
+	}
+
+	&__bg {
+		@include image-abs;
+		z-index: -1;
+
+		@include media($mobile) {
+			--object-pos: 25%;
+		}
+	}
+}
